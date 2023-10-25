@@ -20,8 +20,8 @@ HOME = os.getcwd()
 
 app = Flask(__name__)
 check=f"{HOME}/runs/detect/result.mp4"
-if(os.path.exists(check)):
-    os.remove(check)
+# if(os.path.exists(check)):
+#     os.remove(check)
 @app.route("/")
 def hello_world():
     return render_template('index.html')
@@ -122,7 +122,7 @@ def predict_img():
     # subfolders = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]    
     # latest_subfolder = max(subfolders, key=lambda x: os.path.getctime(os.path.join(folder_path, x)))    
     image_path = folder_path+'/result.mp4'
-    if os.path.exists(check):
+    if os.path.exists(image_path):
         return render_template('indexnew.html', image_path=image_path)
     else:
         return render_template('index.html', image_path=image_path)
