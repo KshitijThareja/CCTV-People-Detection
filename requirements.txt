@@ -1,12 +1,15 @@
 absl-py==2.0.0
 astunparse==1.6.3
+blinker==1.6.3
 cachetools==5.3.2
 certifi==2023.7.22
 charset-normalizer==3.3.1
+click==8.1.7
 contourpy==1.1.1
 cvzone==1.5.6
 cycler==0.12.1
 filelock==3.12.4
+Flask==3.0.0
 flatbuffers==23.5.26
 fonttools==4.43.1
 fsspec==2023.10.0
@@ -19,6 +22,7 @@ h5py==3.10.0
 idna==3.4
 intel-extension-for-pytorch==2.1.0
 intel_tensorflow==2.13.0
+itsdangerous==2.1.2
 Jinja2==3.1.2
 keras==2.13.1
 kiwisolver==1.4.5
