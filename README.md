@@ -50,7 +50,8 @@ This is a simple web application for uploading videos for people detection and d
 
 
 
-https://github.com/KshitijThareja/CCTV-People-Detection/assets/116485536/2a099b59-256c-4e5e-b4f9-2176498ff9fd
+https://github.com/KshitijThareja/CCTV-People-Detection/assets/116485536/7278ac37-7504-4105-8963-41c2c980b46a
+
 
 
   
