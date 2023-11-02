@@ -33,7 +33,6 @@ def predict_img():
             f = request.files['file']
 
             basepath = os.path.dirname(__file__)
-            # print("bspath=", basepath)
             filepath = os.path.join(basepath, 'uploads', f.filename)
             print("upload folder is ", filepath)
             f.save(filepath)
@@ -150,13 +149,8 @@ def display(filename):
     folder_path = 'runs/detect/result.mp4'
     directory = folder_path
     print("printing directory: ", directory)
-    filename = predict_img.imgpath
-    file_extension = filename.rsplit('.', 1)[1].lower()
-    if file_extension == 'mp4':
-        return render_template('index.html')
-
-    else:
-        return "Invalid file format"
+    filename = predict_img
+    return render_template('index.html')
 
 
 @app.route('/download')
@@ -168,7 +162,7 @@ def download():
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
-        description="Flask app exposing yolov5 models")
+        description="Flask app exposing yolov8 models")
     parser.add_argument("--port", default=5000, type=int, help="port number")
     args = parser.parse_args()
     app.jinja_env.auto_reload = True

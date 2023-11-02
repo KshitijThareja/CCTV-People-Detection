@@ -14,8 +14,9 @@
     .box {
       display: inline-block;
       width: 70%;
-      background-color: white;
+      background-color: rgb(56, 57, 73);
       margin: 10px;
+      border-radius: 50px;
     }
   </style>
   <style>
@@ -31,7 +32,7 @@
       }
     }
   </style>
-=  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <style>
     html,
     body {
@@ -46,14 +47,15 @@
   <div class="container">
     <div class="box">
       <form class="form-signin" method=post enctype=multipart/form-data name="form1">
-        <img class="mb-4" src="/static/pfp.jpg" alt="" width="72">
+        <img class="mb-4" style="border-radius: 100px;" src="/static/pfp.jpg" alt="" width="72">
         <h1 class="h3 mb-3 font-weight-normal">Upload any image or video</h1>
-        <input type="file" name="file" class="form-control-file" id="inputfile">
-
+        <div class="mb-3">
+          <input class="form-control" name="file" type="file" id="inputfile">
+        </div>
         <br />
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
-        <p class="mt-5 mb-3 text-muted">Upload the video and wait until the processing is finished.</p>
+        <button class="btn btn-lg btn-outline-info btn-block text-white" type="submit">Upload</button>
+        <p class="mt-5 mb-3">Upload the video and wait until the processing is finished.</p>
       </form>
     </div>
     <br>
